@@ -4,9 +4,8 @@ const app = express();
 app.use(express.json());
 
 app.post("/", (req, res) => {
-  console.log("📩 LINE Webhook 受信！");
+  console.log("✅ POST / 受信！（LINE Webhook？）");
   console.log(JSON.stringify(req.body, null, 2));
-
   res.status(200).send("OK");
 });
 
@@ -15,3 +14,4 @@ app.get("/", (req, res) => {
 });
 
 module.exports = app;
+
